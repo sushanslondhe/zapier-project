@@ -25,12 +25,12 @@ model Zap {
 }
 
 model Trigger {
-  id        String           @id @default(uuid())
-  zapId     String           @unique
-  type      AvailableTrigger @relation(fields: [triggerId], references: [id])
-  metadata  Json             @default("{}")
-  triggerId String
-  zap       Zap              @relation(fields: [zapId], references: [id])
+  id                 String           @id @default(uuid())
+  zapId              String           @unique
+  type               AvailableTrigger @relation(fields: [AvailabletriggerId], references: [id])
+  metadata           Json             @default("{}")
+  AvailabletriggerId String
+  zap                Zap              @relation(fields: [zapId], references: [id])
 }
 
 model AvailableTrigger {

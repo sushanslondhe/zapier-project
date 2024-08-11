@@ -5,7 +5,7 @@ const client = new PrismaClient();
 const app = Express();
 app.use(Express.json());
 
-app.get("/hooks/catch/:userId/:zapId", async (req, res) => {
+app.post("/hooks/catch/:userId/:zapId", async (req, res) => {
   const userId = req.params.userId;
   const zapId = req.params.zapId;
   const body = req.body;
@@ -30,4 +30,6 @@ app.get("/hooks/catch/:userId/:zapId", async (req, res) => {
   });
 });
 
-app.listen(3001);
+app.listen(3001, () => {
+  console.log("port running");
+});
