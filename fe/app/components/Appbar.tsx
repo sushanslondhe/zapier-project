@@ -1,7 +1,10 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function Appbar() {
+  const router = useRouter();
   return (
     <div className=" border-b h-[60px] flex justify-between items-center">
       <div className="md:hidden pl-2">
@@ -15,7 +18,11 @@ export default function Appbar() {
           </Button>
         </div>
         <div className="">
-          <Button variant="primaryButton" className="">
+          <Button
+            onClick={() => router.push("/auth/signup")}
+            variant="primaryButton"
+            className=""
+          >
             Signup
           </Button>
         </div>

@@ -4,7 +4,7 @@ import { Check } from "lucide-react";
 
 const Home = () => {
   return (
-    <section className=" flex  flex-col ">
+    <section className=" flex  flex-col gap-10 ">
       <Appbar />
       <div className=" flex flex-col justify-center items-center gap-10  ">
         <div className="flex flex-col justify-center max-w-xl md:max-w-2xl gap-5 md:gap-10   ">
@@ -40,7 +40,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className=" flex justify-center">
+      <div className=" flex justify-center h-[400px] md:h-[600px] ">
         <video
           className=" aspect-square  md:max-w-5xl "
           autoPlay
